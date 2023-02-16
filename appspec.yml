@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
    - source: /dist
-     destination: /var/www/html
-  - source: /codedeploy-lifecycle-scripts
-  destination: /var/www/codedeploy-lifecycle-scripts
+    destination: /var/www/html
+   - source: /codedeploy-lifecycle-scripts
+    destination: /var/www/codedeploy-lifecycle-scripts
 permissions:
    - object: /var/www/html
      pattern: "**"
