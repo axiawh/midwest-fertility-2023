@@ -1,2 +1,2 @@
 User-Agent: *
-Sitemap: _INSERT_PRODUCTION_SITEMAP_URL_
+Sitemap: https://https://www.midwestfertility.com//sitemap_index.xml

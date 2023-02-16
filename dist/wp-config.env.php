@@ -3,7 +3,7 @@
 $hostname = !empty($_SERVER['X_FORWARDED_HOST']) ? $_SERVER['X_FORWARDED_HOST'] : $_SERVER['HTTP_HOST'];
 $protocol = "";
 switch ($hostname) {
-  case 'ec2-54-211-211-186.compute-1.amazonaws.com':
+  case 'ec2-3-93-177-5.compute-1.amazonaws.com':
     define('WP_ENV', 'prod');
     define('WP_DEBUG', false);
     define('DB_NAME', getenv('DBNAMEPROD'));
