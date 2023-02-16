@@ -1,0 +1,1 @@
+<?php if(get_field('custom_page_title') !=""): ?><h1><?php the_field('custom_page_title'); ?></h1><?php elseif(get_field('turn_off_all_page_titles','options') !=""): ?><?php elseif(get_field('turn_off_page_title') !=""): ?><?php else: ?><h1><?php the_title(); ?></h1><?php endif; ?>

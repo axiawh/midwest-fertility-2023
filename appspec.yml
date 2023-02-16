@@ -1,0 +1,29 @@
+version: 0.0
+os: linux
+files:
+   - source: /dist
+     destination: /var/www/html
+  - source: /codedeploy-lifecycle-scripts
+  destination: /var/www/codedeploy-lifecycle-scripts
+permissions:
+   - object: /var/www/html
+     pattern: "**"
+     owner: nginx
+     group: nginx
+     mode: 755
+     type:
+       - file
+hooks:
+   BeforeInstall:
+    - location: codedeploy-lifecycle-scripts/cleanhtml.sh
+      runas: root
+   AfterInstall:
+    - location: codedeploy-lifecycle-scripts/configureWP.sh
+      runas: root
+    - location: codedeploy-lifecycle-scripts/setNginxConf.sh
+      runas: root
+    - location: codedeploy-lifecycle-scripts/restartPackages.sh
+      runas: root
+   ValidateService:
+    - location: codedeploy-lifecycle-scripts/restartCodedeployAgent.sh
+      runas: root

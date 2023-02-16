@@ -1,0 +1,29 @@
+/* CSS Document */
+
+body#tinymce.wp-editor { 
+    font-family: 'Playfair Display', serif;
+	color:#000;
+    margin:10px; 
+}
+body#tinymce.wp-editor h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor h6{
+	color:#15AABF;
+}
+body#tinymce.wp-editor p{
+	color:#000;
+}
+body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
+    color:#15AABF;
+}
+body#tinymce.wp-editor a:hover {
+	color:#333;
+}
+i.mce-i-icon {
+    font: 400 20px/1 dashicons;
+    padding: 0;
+    vertical-align: top;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-left: -2px;
+    padding-right: 2px
+}

@@ -1,0 +1,1 @@
+<?php if(get_field('top_page_content')): ?><div class="top-content-box"><?php the_field('top_page_content'); ?></div><?php endif; ?>

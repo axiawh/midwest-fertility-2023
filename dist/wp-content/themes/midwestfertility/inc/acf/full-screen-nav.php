@@ -1,0 +1,6 @@
+ <?php if(get_field('mobile_navigation_choice', 'options') == "Traditional"): ?><?php else: ?><div id="full-screen-nav-overlay-target" class="full-screen-nav-overlay">
+   <i class="fas fa-times-circle fa-4x" aria-hidden="true" onclick="closefullscreennav()"></i>
+  <div class="full-screen-element"> <?php if(get_field('mobile_full_screen_nav_logo','options')): ?><?php $sitelogo = wp_get_attachment_image_src(get_field('mobile_full_screen_nav_logo','options'), 'medium'); ?>
+      	<a href="<?php echo home_url(); ?>" /><img src="<?php echo $sitelogo[0]; ?>" alt="<?php bloginfo('name'); ?>" /></a><?php else: ?><?php get_template_part('/inc/acf/logo', 'ACF - Logo'); ?><?php endif; ?>
+   <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_id' => 'full-screen-nav-container', 'theme_location' => 'primary-menu', 'items_wrap' => '<ul id="menu">%3$s</ul><div class="clear"></div>'  ) ); ?></div><?php endif; ?></div>
+    <?php /*?>----------------------> FULL SCREEN NAV Ends <-----------------------<?php */?>

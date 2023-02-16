@@ -1,0 +1,2 @@
+<?php if( get_row_layout() == 'wysiwyg_paragraph_content' ): ?>
+<?php if(get_sub_field('full_width_background_color')): ?><div class="content-box-bg-box" style="background-color: <?php the_sub_field('full_width_background_color'); ?>;"><?php the_sub_field('paragraph'); ?></div><?php else: ?><?php the_sub_field('paragraph'); ?><?php endif; ?><?php endif; ?>
