@@ -3,24 +3,14 @@
 $hostname = !empty($_SERVER['X_FORWARDED_HOST']) ? $_SERVER['X_FORWARDED_HOST'] : $_SERVER['HTTP_HOST'];
 $protocol = "";
 switch ($hostname) {
-  case '_INSERT_PROD_DOMAIN_NAME':
+  case 'ec2-52-70-32-199.compute-1.amazonaws.com':
     define('WP_ENV', 'prod');
     define('WP_DEBUG', false);
     define('DB_NAME', getenv('DBNAMEPROD'));
     define('DB_USER', getenv('DBUSERPROD'));
     define('DB_PASSWORD', getenv('DBPASSPROD'));
     define('DB_HOST', getenv('DBHOSTPROD'));
-    $protocol = "_INSERT_PROD_DOMAIN_PROTOCOL_";
-    break;
-
-  case '_INSERT_DEV_DOMAIN_NAME_':
-    define('WP_ENV', 'dev');
-    define('WP_DEBUG', true);
-    define('DB_NAME', getenv('DBNAMEDEV'));
-    define('DB_USER', getenv('DBUSERDEV'));
-    define('DB_PASSWORD', getenv('DBPASSDEV'));
-    define('DB_HOST', getenv('DBHOSTDEV'));
-    $protocol = "_INSERT_DEV_DOMAIN_PROTOCOL_";
+    $protocol = "http://";
     break;
 
   case 'localhost':
